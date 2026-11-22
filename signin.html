@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Sign in — KEYFRAME</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#141313">
+<link rel="preload" href="assets/fonts/zunburk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="css/colors.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body class="ka">
+<main class="ka-signin">
+  <div class="ka-signin__img">
+    <img src="assets/img/sky-balconies.webp" alt="">
+    <a class="ka-signin__brand" href="index.html" aria-label="KEYFRAME — website"><span class="logo logo--h"></span></a>
+    <p class="ka-signin__quote" data-i18n="si.quote">One unit. One responsibility.</p>
+  </div>
+  <div class="ka-signin__panel">
+    <div class="ka-signin__top"><a href="index.html" data-i18n="si.back">Back to website</a><button class="lang" type="button" data-lang-toggle style="border-color:var(--rule-l)">ع</button></div>
+    <div>
+      <h1><span data-i18n="si.h1">Welcome</span> <span data-i18n="si.h2">back.</span></h1>
+      <p class="mut" data-i18n="si.sub" style="margin:10px 0 0">Sign in to your KEYFRAME account.</p>
+    </div>
+    <form id="signForm" novalidate>
+      <fieldset class="ka-roles"><legend data-i18n="si.role">I'm signing in as</legend>
+        <label><input type="radio" name="role" value="developer" checked><span><b data-i18n="si.dev">Developer</b><em data-i18n="si.devd">Inventory &amp; assignments</em></span></label>
+        <label><input type="radio" name="role" value="broker"><span><b data-i18n="si.brk">Broker</b><em data-i18n="si.brkd">Units, leads &amp; transfers</em></span></label>
+      </fieldset>
+      <div class="ka-field"><label for="siEmail" data-i18n="si.email">Work email</label><input class="ka-input" id="siEmail" type="email" autocomplete="username" aria-describedby="siEmailErr"><span class="ka-err" id="siEmailErr"></span></div>
+      <div class="ka-field"><label for="siPass" data-i18n="si.pass">Password</label><input class="ka-input" id="siPass" type="password" autocomplete="current-password" aria-describedby="siPassErr"><span class="ka-err" id="siPassErr"></span></div>
+      <a href="signin.html" class="ka-note" data-i18n="si.forgot" style="justify-self:start">Forgot password?</a>
+      <button class="ka-btn" type="submit" data-i18n="si.btn">Sign in</button>
+      <p class="ka-note" data-i18n="si.note">Prototype — any email and password open the demo account. Nothing is sent or stored.</p>
+      <p class="ka-note"><span data-i18n="si.new">New to KEYFRAME?</span> <a href="contact.html" data-i18n="si.create">Request an account</a></p>
+    </form>
+  </div>
+</main>
+<script src="js/i18n.js"></script>
+<script src="js/app-i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

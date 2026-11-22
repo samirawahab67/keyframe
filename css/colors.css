@@ -1,0 +1,102 @@
+/* KEYFRAME — color system v1
+   Rule: only two hues speak. Bronze = earned verification. Brick = something is broken.
+   Everything else (info, warning, progress, pending, empty, blocked, generic success) is ink & stone + icon + words. */
+
+:root {
+  --kf-neutral-950: #141313;
+  --kf-neutral-900: #1c1b1b;
+  --kf-neutral-850: #232222;
+  --kf-neutral-800: #303030;
+  --kf-neutral-700: #4a4848;
+  --kf-neutral-600: #5c5a5a;
+  --kf-neutral-500: #7a7777;
+  --kf-neutral-400: #9a9696;
+  --kf-neutral-300: #b9b6b6;
+  --kf-neutral-200: #d4d1d2;
+  --kf-neutral-100: #e1dfe0;
+  --kf-neutral-50: #eceaea;
+  --kf-bronze-100: #f1e3cf;
+  --kf-bronze-300: #e2b479;
+  --kf-bronze-400: #d69f5a;
+  --kf-bronze-500: #ce8e42;
+  --kf-bronze-600: #a8712f;
+  --kf-bronze-700: #7a4f1a;
+  --kf-bronze-800: #4a3214;
+  --kf-bronze-900: #2a1d0c;
+  --kf-brick-100: #f2dbd4;
+  --kf-brick-300: #e8a08c;
+  --kf-brick-400: #d97c63;
+  --kf-brick-500: #b5523b;
+  --kf-brick-600: #943f2c;
+  --kf-brick-700: #7a3020;
+  --kf-brick-800: #4a1e14;
+  --kf-brick-900: #2a110b;
+}
+
+:root, [data-theme="dark"] {
+  --kf-surface-page: var(--kf-neutral-950);  /* Page background */
+  --kf-surface-raised: var(--kf-neutral-850);  /* Cards, panels */
+  --kf-surface-sunken: var(--kf-neutral-900);  /* Inputs, wells */
+  --kf-surface-inverse: var(--kf-neutral-100);  /* Inverse blocks */
+  --kf-text-primary: var(--kf-neutral-100);  /* Body and headings */
+  --kf-text-secondary: var(--kf-neutral-400);  /* Supporting text */
+  --kf-text-disabled: var(--kf-neutral-600);  /* Disabled labels (exempt from contrast) */
+  --kf-text-inverse: var(--kf-neutral-950);  /* Text on inverse */
+  --kf-border-subtle: var(--kf-neutral-800);  /* Dividers */
+  --kf-border-strong: var(--kf-neutral-500);  /* Control outlines */
+  --kf-border-focus: var(--kf-neutral-100);  /* Focus ring */
+  --kf-action-primary-bg: var(--kf-neutral-100);  /* Primary button — never bronze */
+  --kf-action-primary-fg: var(--kf-neutral-950);  /* Primary button label */
+  --kf-action-primary-hover: var(--kf-neutral-200);  /* Primary hover */
+  --kf-verified-fg: var(--kf-bronze-500);  /* Verified label, Verified Frame */
+  --kf-verified-mark: var(--kf-bronze-500);  /* Brackets, diamond (graphic, 3:1) */
+  --kf-verified-bg: var(--kf-bronze-900);  /* Verified row tint (rare) */
+  --kf-error-fg: var(--kf-brick-400);  /* Error text */
+  --kf-error-border: var(--kf-brick-400);  /* Invalid field outline */
+  --kf-error-bg: var(--kf-brick-900);  /* Error banner tint */
+  --kf-warning-fg: var(--kf-neutral-100);  /* Warning text — neutral + triangle icon */
+  --kf-warning-border: var(--kf-neutral-300);  /* Dashed warning outline */
+  --kf-info-fg: var(--kf-neutral-300);  /* Info text + i icon */
+  --kf-progress-track: var(--kf-neutral-800);  /* Progress track */
+  --kf-progress-fill: var(--kf-neutral-100);  /* Progress fill — never bronze */
+  --kf-pending-fg: var(--kf-neutral-400);  /* Pending: outline diamond */
+  --kf-empty-fg: var(--kf-neutral-400);  /* Empty state copy */
+  --kf-blocked-fg: var(--kf-neutral-400);  /* Blocked/locked label + lock icon */
+  --kf-success-fg: var(--kf-neutral-100);  /* Generic success (saved) — neutral + check */
+  --kf-verified-on-bg: var(--kf-bronze-500);  /* Text on verified tint */
+  --kf-error-on-bg: var(--kf-brick-400);  /* Text on error tint */
+}
+
+[data-theme="light"], .on-light {
+  --kf-surface-page: var(--kf-neutral-100);  /* Page background */
+  --kf-surface-raised: var(--kf-neutral-50);  /* Cards, panels */
+  --kf-surface-sunken: var(--kf-neutral-200);  /* Inputs, wells */
+  --kf-surface-inverse: var(--kf-neutral-950);  /* Inverse blocks */
+  --kf-text-primary: var(--kf-neutral-950);  /* Body and headings */
+  --kf-text-secondary: var(--kf-neutral-600);  /* Supporting text */
+  --kf-text-disabled: var(--kf-neutral-400);  /* Disabled labels (exempt from contrast) */
+  --kf-text-inverse: var(--kf-neutral-100);  /* Text on inverse */
+  --kf-border-subtle: var(--kf-neutral-200);  /* Dividers */
+  --kf-border-strong: var(--kf-neutral-500);  /* Control outlines */
+  --kf-border-focus: var(--kf-neutral-950);  /* Focus ring */
+  --kf-action-primary-bg: var(--kf-neutral-950);  /* Primary button — never bronze */
+  --kf-action-primary-fg: var(--kf-neutral-100);  /* Primary button label */
+  --kf-action-primary-hover: var(--kf-neutral-800);  /* Primary hover */
+  --kf-verified-fg: var(--kf-bronze-700);  /* Verified label, Verified Frame */
+  --kf-verified-mark: var(--kf-bronze-600);  /* Brackets, diamond (graphic, 3:1) */
+  --kf-verified-bg: var(--kf-bronze-100);  /* Verified row tint (rare) */
+  --kf-error-fg: var(--kf-brick-600);  /* Error text */
+  --kf-error-border: var(--kf-brick-600);  /* Invalid field outline */
+  --kf-error-bg: var(--kf-brick-100);  /* Error banner tint */
+  --kf-warning-fg: var(--kf-neutral-950);  /* Warning text — neutral + triangle icon */
+  --kf-warning-border: var(--kf-neutral-700);  /* Dashed warning outline */
+  --kf-info-fg: var(--kf-neutral-700);  /* Info text + i icon */
+  --kf-progress-track: var(--kf-neutral-200);  /* Progress track */
+  --kf-progress-fill: var(--kf-neutral-950);  /* Progress fill — never bronze */
+  --kf-pending-fg: var(--kf-neutral-600);  /* Pending: outline diamond */
+  --kf-empty-fg: var(--kf-neutral-600);  /* Empty state copy */
+  --kf-blocked-fg: var(--kf-neutral-600);  /* Blocked/locked label + lock icon */
+  --kf-success-fg: var(--kf-neutral-950);  /* Generic success (saved) — neutral + check */
+  --kf-verified-on-bg: var(--kf-bronze-800);  /* Text on verified tint */
+  --kf-error-on-bg: var(--kf-brick-800);  /* Text on error tint */
+}

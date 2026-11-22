@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>KEYFRAME</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#141313">
+<link rel="preload" href="assets/fonts/zunburk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="css/colors.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body class="ka" data-app="broker">
+<div class="ka-shell">
+  <aside class="ka-side" aria-label="Workspace">
+    <a class="ka-brand" href="#overview" aria-label="KEYFRAME"><span class="logo logo--h"></span></a>
+    <span class="ka-role" data-i18n="role.brk"></span>
+    <nav aria-label="Workspace navigation"><ul class="ka-nav"></ul></nav>
+    <div class="ka-side__foot">
+      <div class="ka-user"><span class="ka-avatar" id="meInit"></span><span><span id="meName"></span><small data-i18n="role.brk"></small></span></div>
+      <button class="ka-signout" type="button" data-i18n="signout">Sign out</button>
+    </div>
+  </aside>
+  <div class="ka-main">
+    <header class="ka-top">
+      <button class="ka-menu" type="button" aria-label="Menu" data-i18n-aria="menu">☰</button>
+      <h1 id="pageTitle" tabindex="-1"></h1>
+      <span class="ka-proto" data-i18n="proto">Prototype · illustrative data</span>
+      <button class="lang" type="button" data-lang-toggle>ع</button>
+    </header>
+    <main class="ka-view" id="view" tabindex="-1"></main>
+  </div>
+</div>
+<div class="ka-scrim"></div>
+<aside class="ka-drawer" role="dialog" aria-modal="true" aria-hidden="true"></aside>
+<dialog class="ka-dialog" id="kaDialog" aria-labelledby="dlgH"><div class="ka-dialog__in"><h3 id="dlgH"></h3><p id="dlgP"></p><div class="ka-btnrow"><button class="ka-btn ka-btn--danger" id="dlgOk" type="button"></button><button class="ka-btn ka-btn--ghost" id="dlgCancel" type="button"></button></div></div></dialog>
+<div class="ka-toasts" aria-live="polite"></div>
+<script src="js/i18n.js"></script>
+<script src="js/app-i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
